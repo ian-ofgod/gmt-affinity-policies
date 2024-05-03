@@ -26,6 +26,9 @@ endif()
 
 project(GMT ${cmake_3_0_PROJ_VERSION} ${cmake_3_0_LANGUAGES} CXX)
 
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup()
+
 ##### HWLOC #####
 include(FindPkgConfig REQUIRED)
 pkg_check_modules(hwloc REQUIRED IMPORTED_TARGET hwloc)
